@@ -3,6 +3,7 @@ from fastai.vision.all import *
 from werkzeug.utils import secure_filename
 
 from .constants import UPLOAD_FOLDER, ALLOWED_EXTENSIONS
+from .cors import crossdomain
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -15,6 +16,7 @@ def allowed_files(filename):
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route("/predict/tree", methods=["POST", "GET"])
+@crossdomain(origin='*')
 def predict_tree():
     """Predict the tree using Flask APIs"""
     if request.method == "POST":
