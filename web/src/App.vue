@@ -38,7 +38,7 @@
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <Home/>
     </v-main>
   </v-app>
 </template>
@@ -46,12 +46,15 @@
 <script lang="ts">
 import Vue from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
+import Home from './components/Home.vue'
+import 'vuetify/dist/vuetify.min.css';
 
 export default Vue.extend({
   name: 'App',
 
   components: {
     HelloWorld,
+    Home,
   },
 
   data: () => ({
