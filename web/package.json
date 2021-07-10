@@ -1,10 +1,23 @@
 {
   "name": "frontend",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "description": "A Website for Tree Classifier ML project",
+  "main": "./dist/camunda-formio-tasklist-vue.common.js",
+  "license": "MIT",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kurianbenoy/Tree-Classifier"
+  },
+  "author": "Kurian Benoy <kurian.bkk@gmail.com",
+  "contributors": [
+    "Kurian Benoy <kurian.bkk@gmail.com> (https://github.com/kurianbenoy)"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build-package": "vue-cli-service build --target lib --name tree-classifier-web ./src/components/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
