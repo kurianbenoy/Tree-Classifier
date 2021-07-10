@@ -14,4 +14,8 @@ I am planning to deploy this based on two ways:
 - [x] Voila
 - [ ] Vue + FastAPI combination
 
+## Reference docs
+
+http://makeseleniumeasy.com/2019/11/26/postman-tutorial-part-49-how-to-upload-an-image-using-postman/
+
 
