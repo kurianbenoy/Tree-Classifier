@@ -1,2 +1,2 @@
-UPLOAD_FOLDER = 'upload/'
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+UPLOAD_FOLDER = "upload/"
+ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg"}
