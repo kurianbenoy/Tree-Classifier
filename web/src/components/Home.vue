@@ -24,13 +24,20 @@
 </template>
 
 <script lang="ts">
-    import Vue from 'vue'
+import axios from 'axios';
+import Vue from 'vue';
 
-    export default Vue.extend({
-        name: 'Home',
+export default Vue.extend({
+    name: 'Home',
 
-        data: () => ({
-            forest: 'https://user-images.githubusercontent.com/24592806/124379282-b3578680-dcd3-11eb-9927-f59ef29bf6b8.jpg',
-        }),
-    })
+    data: () => ({
+        forest: 'https://user-images.githubusercontent.com/24592806/124379282-b3578680-dcd3-11eb-9927-f59ef29bf6b8.jpg',
+    }),
+
+    methods:  {
+        submit: function() {
+            const file = this.$refs.file.files[0];
+        }   
+    }
+})
 </script>
