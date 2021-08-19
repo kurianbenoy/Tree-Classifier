@@ -37,6 +37,12 @@ export default Vue.extend({
     methods:  {
         submit: function() {
             const file = this.$refs.file.files[0];
+            let params = new FormData();
+
+            params.append('file', file);
+            params.append('type', 'image');
+            console.log(params);
+            axios.post(`http://localhost:5000/api`)
         }   
     }
 })

@@ -14,6 +14,13 @@ I am planning to deploy this based on two ways:
 - [x] Voila
 - [ ] Vue + FastAPI combination
 
+## Running Backend
+
+virtualenv -p python3 .env/
+source .env/bin/activate
+cd api/
+flask run
+
 ## Reference docs
 
 http://makeseleniumeasy.com/2019/11/26/postman-tutorial-part-49-how-to-upload-an-image-using-postman/

@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, request, flash, redirect
+from flask import Flask, request, flash, redirect, render_template
 from fastai.vision.all import *
 from fastai.vision.core import PILImage
 from fastai.vision.all import load_learner
@@ -49,3 +49,8 @@ def predict_tree():
             tree_class = ml_inference(filename)
             return tree_class
     return "Not supported"
+
+
+@app.route("/")
+def index():
+    return render_template("index.html", **{"greeting": "Hello from Flask!"})
