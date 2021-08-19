@@ -47,10 +47,15 @@ def predict_tree():
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
             tree_class = ml_inference(filename)
-            return tree_class
+            return f"Predicted tree is: {tree_class}"
     return "Not supported"
 
 
-@app.route("/")
+@app.route("/test")
 def index():
-    return render_template("index.html", **{"greeting": "Hello from Flask!"})
+    return render_template("testindex.html", **{"greeting": "Hello from Flask!"})
+
+
+@app.route("/")
+def frontendVue():
+    return render_template("index.html")

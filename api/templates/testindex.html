@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="vm">
+        <p>{{ greeting }}</p>
+        <p>[[ greeting ]]</p>
+    </div>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
